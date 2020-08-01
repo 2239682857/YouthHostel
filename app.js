@@ -36,6 +36,6 @@ App({
   globalData: {
     userInfo: null,
     
-    baseUrl:'http://localhost:8080',
+    baseUrl:'https://331223n076.eicp.vip/',
   }
 })
