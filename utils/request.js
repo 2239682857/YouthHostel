@@ -1,10 +1,10 @@
 // request.js
 let OK = 20000;
-let ERROR = 20001;//Ê§°Ü
-let LOGIN_ERROR = 20002;//ÓÃ»§Ãû»òÃÜÂë´íÎó
-let ACCESS_ERROR = 20003;//È¨ÏŞ²»×ã
-let REMOTE_ERROR = 20004;//Ô¶³Ìµ÷ÓÃÊ§°Ü
-let REPE_EOOR = 20005;//ÖØ¸´²Ù×÷
+let ERROR = 20001;//å¤±è´¥
+let LOGIN_ERROR = 20002;//ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯
+let ACCESS_ERROR = 20003;//æƒé™ä¸è¶³
+let REMOTE_ERROR = 20004;//è¿œç¨‹è°ƒç”¨å¤±è´¥
+let REPE_EOOR = 20005;//é‡å¤æ“ä½œ
 const request = options => {
   return new Promise((resolve, reject) => {
     const { data, method } = options
@@ -22,31 +22,31 @@ const request = options => {
             console.log(res.data);
             if (res.data.code == ERROR) {
               wx.showToast({
-                title: '·şÎñÆ÷´íÎó£¬ÇëÁªÏµ¹ÜÀíÔ±£¡',
+                title: 'æœåŠ¡å™¨é”™è¯¯ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼',
                 icon: 'none',
                 duration: 1500
               })
             } else if (res.data.code == LOGIN_ERROR) {
               wx.showToast({
-                title: 'ÓÃ»§Ãû»òÃÜÂë´íÎó',
+                title: 'ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯',
                 icon: 'none',
                 duration: 1500
               })
             } else if (res.data.code == ACCESS_ERROR) {
               wx.showToast({
-                title: 'È¨ÏŞ²»¹»',
+                title: 'æƒé™ä¸å¤Ÿ',
                 icon: 'none',
                 duration: 1500
               })
             } else if (res.data.code == REMOTE_ERROR) {
               wx.showToast({
-                title: 'Ô¶³Ìµ÷ÓÃÊ§°Ü',
+                title: 'è¿œç¨‹è°ƒç”¨å¤±è´¥',
                 icon: 'none',
                 duration: 1500
               })
             } else if (res.data.code == REPE_EOOR) {
               wx.showToast({
-                title: 'ÖØ¸´²Ù×÷',
+                title: 'é‡å¤æ“ä½œ',
                 icon: 'none',
                 duration: 1500
               })
