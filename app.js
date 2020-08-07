@@ -14,9 +14,9 @@ App({
                 if (res.code != null) {
 
                     wx.request({
-                        url: this.globalData.baseUrl + '/user/login',
+                        url: this.globalData.baseUrl + '/user/authorization',
                         data: {
-                            code: res.code
+                            weChatCode: res.code
                         },
                         method: "POST",
                         header: {
