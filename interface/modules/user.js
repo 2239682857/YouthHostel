@@ -7,7 +7,7 @@ const baseUrl = getApp().globalData.baseUrl
  */
 export function login(data) {
   return request({
-    url: `${baseUrl}/user/login`,
+    url: `${baseUrl}/api-user/login`,
     method: 'post',
     data: data
   })
