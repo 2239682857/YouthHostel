@@ -3,12 +3,10 @@ const baseUrl = getApp().globalData.baseUrl
 
 /**
  * 用户登录
- * @param {*} data 
  */
-export function login(data) {
+export function login() {
   return request({
-    url: `${baseUrl}/user/login`,
-    method: 'post',
-    data: data
+    url: `${baseUrl}/api-user/findAll`,
+    method: 'get'
   })
 }

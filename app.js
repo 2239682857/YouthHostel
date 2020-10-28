@@ -36,6 +36,6 @@ App({
   globalData: {
     userInfo: null,
     
-    baseUrl:'https://331223n076.eicp.vip/',
+    baseUrl:'https://331223n076.eicp.vip',
   }
 })
